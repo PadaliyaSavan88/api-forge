@@ -18,19 +18,22 @@ More skills coming: `/frontend`, `/devops`, `/database`
 
 ## Install a skill
 
-**One-liner (no clone needed):**
+**Recommended — works on Windows, Mac, and Linux (requires Node.js):**
+
+```bash
+npx skills add PadaliyaSavan88/api-forge
+```
+
+Install a specific skill:
+
+```bash
+npx skills add PadaliyaSavan88/api-forge --skill backend
+```
+
+**Manual fallback (curl — Linux/Mac only):**
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/PadaliyaSavan88/api-forge/main/install.sh | bash -s backend
-```
-
-**Or clone and install:**
-
-```bash
-git clone https://github.com/PadaliyaSavan88/api-forge
-cd api-forge
-./install.sh backend      # install one skill
-./install.sh all          # install all skills
 ```
 
 Skills are installed to `~/.claude/commands/`. Restart Claude Code or open a new session after installing.
@@ -74,7 +77,7 @@ Controller (HTTP) → Service (business logic) → DB Model (query only)
 
 To add a skill:
 
-1. Create `skills/{skill-name}/{skill-name}.md`
+1. Create `skills/{skill-name}/SKILL.md` with `name` and `description` frontmatter
 2. Add a `skills/{skill-name}/README.md`
 3. Add the skill name to `AVAILABLE_SKILLS` in `install.sh`
 4. Add a row to the skills table in this README

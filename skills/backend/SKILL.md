@@ -1,3 +1,8 @@
+---
+name: backend
+description: Scaffold or extend an Express + TypeScript backend using a strict 3-layer architecture (Controller → Service → DB). Handles new projects, alignment of existing ones, and adding new resources with full Zod validation, Winston logging, and configurable auth/DB/tooling.
+---
+
 # /backend — Express + Node.js Backend Skill
 
 **Author:** Savan Padaliya  
@@ -1043,12 +1048,11 @@ start().catch((err) => {
 ## Installation
 
 ```bash
-# Install this skill globally on your machine
-curl -fsSL https://raw.githubusercontent.com/PadaliyaSavan88/api-forge/main/install.sh | bash -s backend
+# Recommended — works on Windows, Mac, and Linux (requires Node.js)
+npx skills add PadaliyaSavan88/api-forge
 
-# Or clone and run locally
-git clone https://github.com/PadaliyaSavan88/api-forge
-cd api-forge && ./install.sh backend
+# Manual fallback (curl)
+curl -fsSL https://raw.githubusercontent.com/PadaliyaSavan88/api-forge/main/install.sh | bash -s backend
 ```
 
 Then in any project, type `/backend` in Claude Code.

@@ -1,5 +1,5 @@
 #!/bin/bash
-# api-forge installer
+# api-forge installer (curl fallback — prefer: npx skills add PadaliyaSavan88/api-forge)
 # Usage: ./install.sh backend
 #        ./install.sh all
 #
@@ -16,7 +16,7 @@ install_skill() {
   local skill=$1
   echo "Installing /$skill skill..."
   mkdir -p "$SKILLS_DIR"
-  curl -fsSL "$REPO_RAW/$skill/$skill.md" -o "$SKILLS_DIR/$skill.md"
+  curl -fsSL "$REPO_RAW/$skill/SKILL.md" -o "$SKILLS_DIR/$skill.md"
   echo "✓ /$skill installed → $SKILLS_DIR/$skill.md"
   echo "  Restart Claude Code or open a new session to use it."
 }
